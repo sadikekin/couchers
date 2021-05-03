@@ -171,6 +171,13 @@ export default function AppRoutes() {
       </AppRoute>
 
       {
+        // DONATE
+      }
+      <AppRoute isPrivate path={donationRoute}>
+        <DonationPage />
+      </AppRoute>
+
+      {
         // COMMUNITIES
       }
       {process.env.REACT_APP_IS_COMMUNITIES_ENABLED && (
@@ -199,10 +206,6 @@ export default function AppRoutes() {
           </AppRoute>
         </>
       )}
-
-      <AppRoute isPrivate path={donationRoute}>
-        <DonationPage />
-      </AppRoute>
 
       {
         // 404 NOT FOUND
