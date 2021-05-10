@@ -6,6 +6,7 @@ import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
 
 import "pb/discussions.proto";
+import "pb/events.proto";
 import "pb/groups.proto";
 import "pb/pages.proto";
 
@@ -206,12 +207,8 @@ message ListEventsReq {
   string page_token = 3;
 }
 
-message Event {
-  // TODO
-}
-
 message ListEventsRes {
-  repeated Event events = 1;
+  repeated org.couchers.api.events.Event events = 1;
 
   string next_page_token = 2;
 }
