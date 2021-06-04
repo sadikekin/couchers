@@ -24,10 +24,12 @@ const useStyles = makeStyles((theme) => ({
   scoreBarLabel: {
     color: theme.palette.common.white,
     lineHeight: theme.spacing(3),
-    paddingLeft: theme.spacing(3),
+    paddingLeft: theme.spacing(2),
     position: "absolute",
     verticalAlign: "middle",
     width: "100%",
+    fontSize: "0.75rem",
+    marginBottom: theme.spacing(2)
   },
 }));
 

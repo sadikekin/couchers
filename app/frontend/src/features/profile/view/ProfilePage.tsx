@@ -25,11 +25,11 @@ const useStyles = makeStyles((theme) => ({
   detailsCard: {
     [theme.breakpoints.down("sm")]: {
       margin: 0,
-      width: "100%",
     },
+    borderRadius: theme.spacing(1),
     flexGrow: 1,
-    margin: theme.spacing(2),
-    padding: theme.spacing(2),
+    padding: theme.spacing(1, 3, 3, 3),
+    boxShadow: "1px 1px 8px rgba(0, 0, 0, 0.25)"
   },
   linkStyle: {
     "&:hover": {
@@ -40,16 +40,25 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
   },
   root: {
-    paddingTop: theme.spacing(3),
+    padding: theme.spacing(1),
+    [theme.breakpoints.up("sm")]: {
+      display: "grid",
+      gridTemplateColumns: "1fr 2fr",
+      gridGap: theme.spacing(3),
+      margin: theme.spacing(0, 3),
+      padding: 0,
+      paddingTop: theme.spacing(3),
+      paddingBottom: theme.spacing(12),
+    },
     [theme.breakpoints.up("md")]: {
-      display: "flex",
-      maxWidth: theme.breakpoints.values.lg,
+      gridTemplateColumns: "1fr 3fr",
+      maxWidth: "61.5rem",
       margin: "0 auto",
-      paddingTop: 0,
     },
   },
   tabPanel: {
     padding: 0,
+    marginTop: theme.spacing(1),
   },
 }));
 
